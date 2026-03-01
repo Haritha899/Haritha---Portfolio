@@ -9,11 +9,11 @@
 
 <style>
 :root {
-    --bg: #121212;
-    --card: #1e1e1e;
-    --accent: #ff6b6b;
-    --text-light: #f5f5f5;
-    --text-muted: #aaaaaa;
+    --bg: #0f1226;
+    --card-gradient: linear-gradient(135deg, #6d5dfc, #9c6bff);
+    --accent: #a78bfa;
+    --text-light: #f3f4ff;
+    --text-muted: #c7c9ff;
 }
 
 * {
@@ -29,6 +29,13 @@ body {
     color: var(--text-light);
 }
 
+.glass-card {
+    background: var(--card-gradient);
+    padding: 50px;
+    border-radius: 40px;
+    box-shadow: 0 20px 60px rgba(109, 93, 252, 0.4);
+    color: white;
+}
 /* NAVBAR */
 
 nav {
@@ -113,12 +120,8 @@ nav a:hover {
 }
 
 .hero-image img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    position: relative;
-    z-index: 2;
+    border: 6px solid #a78bfa;
+    box-shadow: 0 15px 40px rgba(167,139,250,0.5);
 }
 
 /* This becomes a perfect ring behind image */
@@ -147,15 +150,21 @@ h2 {
 
 /* SKILLS */
 
-.skills span {
-    display: inline-block;
-    background: var(--card);
-    padding: 10px 15px;
-    margin: 8px 8px 8px 0;
-    border-radius: 6px;
-    font-size: 14px;
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
 }
 
+.skill-grid h3 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.skill-grid p {
+    color: #ececff;
+}
 /* PROJECTS */
 
 .project-card {
@@ -260,6 +269,7 @@ background in network security, digital forensics and secure system development.
 
 <!-- ABOUT -->
 <section class="section" id="about">
+    <div class="glass-card">
     <h2>About Me</h2>
     <p>
         Focused and self-driven cybersecurity enthusiast with strong foundations in secure system design, digital forensics, and web application development.
@@ -270,54 +280,28 @@ background in network security, digital forensics and secure system development.
 
 <!-- SKILLS -->
 <section class="section" id="skills">
-<h2>Technical Skills</h2>
+    <div class="glass-card">
 
-<div class="skills">
-<span>Python</span>
-<span>HTML</span>
-<span>CSS</span>
-<span>Java</span>
-<span>Flask</span>
-<span>MySQL</span>
-<span>Git & GitHub</span>
-<span>Kali Linux</span>
-<span>LaTeX</span>
-<span>Blender</span>
-<span>Figma</span>
-<span>Canva</span>
-</div>
+        <h2>Technical Skills</h2>
+        <div class="skill-grid">
+            <div>
+                <h3>Programming</h3>
+                <p>Python, Java, HTML, CSS, React,MySQL</p>
+            </div>
 
-<h2 style="margin-top:50px;">Cybersecurity Tools</h2>
-<div class="skills">
-<span>Nmap</span>
-<span>Wireshark</span>
-<span>Burp Suite</span>
-<span>Metasploit</span>
-<span>Hydra</span>
-<span>Hashcat</span>
-<span>John the Ripper</span>
-<span>Autopsy</span>
-<span>FTK Imager</span>
-<span>Volatility</span>
-<span>Steghide</span>
-<span>Sleuthkit</span>
-<span>MD5 Hash</span>
-</div>
+            <div>
+                <h3>Cybersecurity Tools</h3>
+                <p>Wireshark, Nmap, Burp Suite, Metasploit, Autopsy</p>
+            </div>
 
-<h2 style="margin-top:50px;">Soft Skills</h2>
-<div class="soft-skills">
-    <span>Leadership</span>
-<span>Adaptability</span>
-<span>Communication</span>
-<span>Decision Making</span>
-<span>Problem Solving</span>
+            <div>
+                <h3>Soft Skills</h3>
+                <p>Leadership, Communication, Problem Solving, Teamwork,Creative Thinking</p>
+            </div>
+        </div>
 
-<span>Teamwork</span>
-<span>Time Management</span>
-<span>Creative Thinking</span>
-</div>
+    </div>
 </section>
-
 <!-- PROJECTS -->
 <section class="section" id="projects">
     <h2>Projects</h2>
