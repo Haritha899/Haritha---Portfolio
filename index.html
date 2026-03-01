@@ -8,6 +8,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+:root {
+    --bg: #0b0f14;
+    --card: #121821;
+    --green: #00ff88;
+    --text-light: #e6edf3;
+    --text-muted: #8b949e;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,23 +25,24 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #0f172a;
-    color: #e2e8f0;
-    line-height: 1.6;
+    background: var(--bg);
+    color: var(--text-light);
 }
+
+/* NAVBAR */
 
 nav {
     position: fixed;
     width: 100%;
-    background-color: #0f172a;
+    background: var(--bg);
     padding: 20px 0;
     text-align: center;
-    border-bottom: 1px solid #1e293b;
+    border-bottom: 1px solid #1f2937;
     z-index: 1000;
 }
 
 nav a {
-    color: #e2e8f0;
+    color: var(--text-light);
     margin: 0 20px;
     text-decoration: none;
     font-weight: 500;
@@ -41,8 +50,85 @@ nav a {
 }
 
 nav a:hover {
-    color: #38bdf8;
+    color: var(--green);
 }
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    gap: 50px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+}
+
+.hero-text span {
+    color: var(--green);
+}
+
+.hero-text h2 {
+    margin-top: 10px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.hero-text p {
+    margin-top: 20px;
+    color: var(--text-muted);
+    max-width: 450px;
+}
+
+.hero-text button {
+    margin-top: 30px;
+    padding: 12px 28px;
+    background: var(--green);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-text button:hover {
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    width: 280px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.circle {
+    width: 320px;
+    height: 320px;
+    background: var(--green);
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    z-index: 1;
+}
+
+/* SECTIONS */
 
 .section {
     max-width: 1000px;
@@ -50,90 +136,90 @@ nav a:hover {
     padding: 120px 20px 80px;
 }
 
-.hero {
-    text-align: center;
-    padding-top: 150px;
-}
-
-.hero h1 {
-    font-size: 50px;
-    font-weight: 700;
-    color: #ffffff;
-}
-
-.hero p {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #94a3b8;
-}
-
-.hero button {
-    margin-top: 30px;
-    padding: 12px 25px;
-    background-color: #38bdf8;
-    border: none;
-    border-radius: 6px;
-    color: #0f172a;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.hero button:hover {
-    background-color: #0ea5e9;
-}
-
 h2 {
     font-size: 28px;
     margin-bottom: 30px;
-    color: #ffffff;
 }
+
+/* SKILLS */
 
 .skills span {
     display: inline-block;
-    background-color: #1e293b;
+    background: var(--card);
     padding: 10px 15px;
     margin: 8px 8px 8px 0;
     border-radius: 6px;
     font-size: 14px;
 }
 
+/* PROJECTS */
+
 .project-card {
-    background-color: #1e293b;
+    background: var(--card);
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-bottom: 25px;
     transition: 0.3s;
 }
 
 .project-card:hover {
-    transform: translateY(-6px);
-}
-
-.project-card h3 {
-    margin-bottom: 15px;
-    color: #ffffff;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,255,136,0.2);
 }
 
 .project-card p {
-    color: #94a3b8;
-    font-size: 15px;
+    color: var(--text-muted);
 }
 
 .project-card strong {
-    color: #38bdf8;
+    color: var(--green);
 }
+
+/* SERVICES */
+
+.services {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    flex: 1;
+    background: var(--card);
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,255,136,0.2);
+}
+
+/* FOOTER */
 
 footer {
     text-align: center;
     padding: 40px 0;
-    border-top: 1px solid #1e293b;
-    color: #94a3b8;
+    border-top: 1px solid #1f2937;
+    color: var(--text-muted);
 }
 
-a {
-    color: #38bdf8;
-    text-decoration: none;
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text p {
+        max-width: 100%;
+    }
+
+    .circle {
+        display: none;
+    }
 }
 </style>
 </head>
@@ -150,9 +236,8 @@ a {
 <!-- HERO -->
 <section class="hero" id="home">
     <div class="hero-container">
-        
         <div class="hero-text">
-            <h1>I'm <span>Haritha S</span></h1>
+            <h1>Hi, I'm <span>Haritha S</span></h1>
             <h2>Cyber Security Engineer</h2>
             <p>
                 Final year BTech student specializing in secure systems,
@@ -167,7 +252,6 @@ a {
             <div class="circle"></div>
             <img src="yourphoto.png" alt="Haritha">
         </div>
-
     </div>
 </section>
 
@@ -189,10 +273,10 @@ a {
         <span>Python</span>
         <span>Flask</span>
         <span>MySQL</span>
-        <span>Unity</span>
+        <span>Cyber Security</span>
         <span>PyTorch</span>
         <span>Computer Vision</span>
-        <span>Cyber Security</span>
+        <span>Unity</span>
         <span>Algorithm Design</span>
     </div>
 </section>
@@ -202,25 +286,45 @@ a {
     <h2>Projects</h2>
 
     <div class="project-card">
-        <h3>Deadlock – 3D Escape Room Game with Face Swapping</h3>
+        <h3>Deadlock – 3D Escape Room Game</h3>
         <p>
-            Developed a Unity-based 3D escape room game featuring two immersive levels.
-            Integrated AI-based face swapping to convert a 2D facial image into a
-            realistic 3D playable character using deep learning and 3D Morphable Models.
+            Developed a Unity-based 3D escape room game with two immersive levels.
+            Contributed to UI design, scene transitions, and gameplay mechanics
+            in a collaborative team environment.
         </p>
-        <p><strong>Technologies:</strong> Unity, PyTorch, Mediapipe, 3DMM</p>
+        <p><strong>Technologies:</strong> Unity, C#, AI Integration</p>
     </div>
 
     <div class="project-card">
         <h3>Automatic Exam Seating Arrangement System</h3>
         <p>
-            Built a web application to automate exam hall seating allocation with
-            anti-cheating rules, conflict-checking algorithms, and optimized
-            room utilization. Generates PDF and Excel seating reports.
+            Built a web application to automate exam hall seating allocation
+            with optimized algorithms and secure backend implementation.
         </p>
-        <p><strong>Technologies:</strong> Flask, SQLAlchemy, MySQL, Pandas</p>
+        <p><strong>Technologies:</strong> Flask, SQLAlchemy, MySQL</p>
     </div>
+</section>
 
+<!-- SPECIALIZATION -->
+<section class="section">
+    <h2>What I Specialize In</h2>
+
+    <div class="services">
+        <div class="service-card">
+            <h3>Secure System Design</h3>
+            <p>Designing scalable and security-focused applications.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>AI Integration</h3>
+            <p>Combining AI models with real-world automation systems.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Web Application Security</h3>
+            <p>Building and testing secure backend systems.</p>
+        </div>
+    </div>
 </section>
 
 <!-- CONTACT -->
