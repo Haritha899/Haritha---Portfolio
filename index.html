@@ -57,7 +57,7 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--green);
+    color: var(--accent);
 }
 
 /* HERO */
@@ -110,7 +110,7 @@ nav a:hover {
 }
 
 .hero-text button:hover {
-    transform: translateY(-3px);
+    background: #8e7dff;
 }
 
 .hero-image {
@@ -188,6 +188,34 @@ h2 {
 
 .project-card strong {
     color: var(--green);
+}
+
+    .contact-box {
+    text-align: center;
+    background: linear-gradient(135deg, #6d5dfc, #9c6bff);
+    padding: 60px;
+    border-radius: 40px;
+    color: white;
+}
+
+.contact-links {
+    margin-top: 30px;
+}
+
+.contact-links a {
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 10px 20px;
+    background: white;
+    color: #6d5dfc;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    background: #ececff;
 }
 
 /* SERVICES */
@@ -309,24 +337,64 @@ background in network security, digital forensics and secure system development.
     <h2>Projects</h2>
 
     <div class="project-card">
-        <h3>Deadlock – 3D Escape Room Game</h3>
-        <p>
-            Developed a Unity-based 3D escape room game with two immersive levels.
-            Contributed to UI design, scene transitions, and gameplay mechanics
-            in a collaborative team environment.
-        </p>
-        <p><strong>Technologies:</strong> Unity, C#, AI Integration</p>
-    </div>
+        <div class="project-card">
+    <h3>Deadlock – 3D Escape Room with Face-Swapping Integration</h3>
+
+    <p>
+        Deadlock is an interactive 3D escape room game developed in Unity where
+        players solve logical puzzles within a limited time to progress through
+        immersive levels. The system is designed as a tech-enabled escape room
+        experience that combines entertainment with potential applications in
+        gamified learning, training environments, and collaborative problem-solving.
+    </p>
+
+    <p>
+        A key innovation of this project is the integration of face-swapping
+        technology, allowing players to embody in-game characters. This feature
+        enhances realism, personalization, and engagement while introducing an
+        advanced human–computer interaction element to traditional escape room gameplay.
+    </p>
+
+    <p>
+        <strong>My Contribution:</strong> Led the complete UI design and implementation,
+        developing interactive panels, menus, and player interface elements.
+        I was primarily responsible for level scripting and scene logic, ensuring
+        smooth gameplay progression, puzzle flow, and efficient scene transitions.
+    </p>
+
+    <p><strong>Technologies:</strong> Unity, C#, UI Canvas, Scene Management</p>
+</div>
 
     <div class="project-card">
         <h3>Automatic Exam Seating Arrangement System</h3>
-        <p>
-            Built a web application to automate exam hall seating allocation
-            with optimized algorithms and secure backend implementation.
-        </p>
-        <p><strong>Technologies:</strong> Flask, SQLAlchemy, MySQL</p>
-    </div>
-</section>
+
+    <p>
+        The Automatic Exam Seating Arrangement System is a web-based application
+        developed to automate the allocation of exam seats in an organized and
+        efficient manner. The system reduces manual administrative workload,
+        minimizes human errors during exam preparation, and ensures structured
+        seating plans through optimized allocation logic.
+    </p>
+
+    <p>
+        The platform provides a user-friendly graphical interface for entering
+        class and room details, including student lists categorized by semester
+        and department, room capacities, and seating layouts. It supports different
+        exam types such as semester and series exams, applying distinct algorithms
+        to optimize seat distribution while ensuring fairness, security, and proper
+        arrangement of students from different departments in adjacent seating.
+    </p>
+
+    <p>
+        <strong>My Contribution:</strong> Designed and developed the frontend interface
+        using HTML and CSS, structured input handling for class and room data,
+        implemented backend logic using Flask, and contributed to database integration
+        for optimized seat allocation. I also documented the project comprehensively
+        using LaTeX.
+    </p>
+
+    <p><strong>Technologies:</strong> HTML, CSS, Flask, MySQL</p>
+</div>
 
 <!-- SPECIALIZATION -->
 <section class="section">
@@ -353,11 +421,20 @@ background in network security, digital forensics and secure system development.
 <!-- CONTACT -->
 <!-- CONTACT -->
 <section class="section" id="contact">
-<h2>Contact</h2>
-<p>Email: harithas899@gmail.com</p>
-<p>Phone: +91 9446136245</p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/haritha-s-a6b96427b" target="_blank">linkedin.com/in/haritha-s-a6b96427b</a></p>
-<p>GitHub: <a href="https://github.com/Haritha899" target="_blank">github.com/Haritha899</a></p>
+    <div class="contact-box">
+        <h2>Let’s Connect</h2>
+        <p>
+            I’m open to internship opportunities, collaborations, and discussions
+            related to cybersecurity and secure system development.
+        </p>
+
+        <div class="contact-links">
+            <a href="mailto:harithas899@gmail.com">Email Me</a>
+            <a href="tel:+919446136245">Call Me</a>
+            <a href="https://www.linkedin.com/in/haritha-s-a6b96427b" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Haritha899" target="_blank">GitHub</a>
+        </div>
+    </div>
 </section>
 
 <footer>
