@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Haritha S | Cyber Security Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -21,20 +22,42 @@ body {
     line-height: 1.6;
 }
 
-.container {
-    width: 85%;
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: #0f172a;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #1e293b;
+    z-index: 1000;
+}
+
+nav a {
+    color: #e2e8f0;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+.section {
     max-width: 1000px;
     margin: auto;
-    padding: 60px 0;
+    padding: 120px 20px 80px;
 }
 
 .hero {
     text-align: center;
-    padding: 100px 20px 60px;
+    padding-top: 150px;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 50px;
+    font-weight: 700;
     color: #ffffff;
 }
 
@@ -44,12 +67,26 @@ body {
     color: #94a3b8;
 }
 
-section h2 {
+.hero button {
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #38bdf8;
+    border: none;
+    border-radius: 6px;
+    color: #0f172a;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background-color: #0ea5e9;
+}
+
+h2 {
     font-size: 28px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #38bdf8;
-    display: inline-block;
-    padding-bottom: 5px;
+    margin-bottom: 30px;
+    color: #ffffff;
 }
 
 .skills span {
@@ -63,23 +100,34 @@ section h2 {
 
 .project-card {
     background-color: #1e293b;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
     transition: 0.3s;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 }
 
 .project-card h3 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #ffffff;
 }
 
 .project-card p {
-    font-size: 14px;
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+.project-card strong {
+    color: #38bdf8;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid #1e293b;
     color: #94a3b8;
 }
 
@@ -87,83 +135,85 @@ a {
     color: #38bdf8;
     text-decoration: none;
 }
-
-footer {
-    text-align: center;
-    padding: 40px 0;
-    font-size: 14px;
-    color: #94a3b8;
-}
 </style>
 </head>
 
 <body>
 
-<div class="hero">
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
     <h1>Haritha S</h1>
-    <p>Cyber Security Student | Aspiring Security Analyst | Future Tech Leader</p>
-</div>
+    <p>Cyber Security Student | AI & Game Development Enthusiast | Future Tech Leader</p>
+    <button onclick="document.getElementById('projects').scrollIntoView();">
+        View My Work
+    </button>
+</section>
 
-<div class="container">
-
-<section>
+<!-- ABOUT -->
+<section class="section" id="about">
     <h2>About Me</h2>
     <p>
-        I am pursuing BTech in Cyber Security with strong interest in cryptography,
-        ethical hacking, and secure system design. My goal is to build impactful
-        cybersecurity solutions and grow into leadership roles in the tech industry.
+        I am pursuing BTech in Cyber Security with strong interest in secure systems,
+        AI integration, and real-world automation solutions. I focus on building
+        impactful, scalable, and secure applications that combine innovation with
+        practical problem solving.
     </p>
 </section>
 
-<section>
+<!-- SKILLS -->
+<section class="section">
     <h2>Skills</h2>
     <div class="skills">
-        <span>Networking</span>
-        <span>Linux</span>
         <span>Python</span>
-        <span>C</span>
-        <span>Java</span>
-        <span>Cryptography</span>
-        <span>Ethical Hacking</span>
-        <span>Vulnerability Assessment</span>
+        <span>Flask</span>
+        <span>MySQL</span>
+        <span>Unity</span>
+        <span>PyTorch</span>
+        <span>Computer Vision</span>
+        <span>Cyber Security</span>
+        <span>Algorithm Design</span>
     </div>
 </section>
 
-<section>
+<!-- PROJECTS -->
+<section class="section" id="projects">
     <h2>Projects</h2>
 
     <div class="project-card">
         <h3>Deadlock – 3D Escape Room Game with Face Swapping</h3>
         <p>
-            Developed a 3D escape room game in Unity featuring two immersive levels
-            (Blacksmith Forge and Abandoned Asylum). Integrated AI-based face swapping
-            technology to convert a 2D facial image into a realistic 3D game character
-            using deep learning and 3D Morphable Models. The project combines
-            game development, computer vision, and real-time system integration.
+            Developed a Unity-based 3D escape room game featuring two immersive levels.
+            Integrated AI-based face swapping to convert a 2D facial image into a
+            realistic 3D playable character using deep learning and 3D Morphable Models.
         </p>
-        <p><strong>Technologies:</strong> Unity, PyTorch, Mediapipe, 3DMM, GAN-based Texture Mapping</p>
+        <p><strong>Technologies:</strong> Unity, PyTorch, Mediapipe, 3DMM</p>
     </div>
 
     <div class="project-card">
         <h3>Automatic Exam Seating Arrangement System</h3>
         <p>
-            Built a web-based system to automate exam hall seating allocation while
-            enforcing anti-cheating rules and optimizing room capacity. Implemented
-            separate algorithms for Semester and Series exams with conflict-avoidance
-            logic based on department and semester grouping. Generated PDF and Excel
-            seating reports for administrative use.
+            Built a web application to automate exam hall seating allocation with
+            anti-cheating rules, conflict-checking algorithms, and optimized
+            room utilization. Generates PDF and Excel seating reports.
         </p>
-        <p><strong>Technologies:</strong> Flask, SQLAlchemy, MySQL, Pandas, OpenPyXL, ReportLab</p>
+        <p><strong>Technologies:</strong> Flask, SQLAlchemy, MySQL, Pandas</p>
     </div>
 
 </section>
-<section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
     <h2>Contact</h2>
     <p>Email: harithas899@gmail.com</p>
     <p>GitHub: <a href="https://github.com/haritha899" target="_blank">github.com/haritha899</a></p>
 </section>
-
-</div>
 
 <footer>
     © 2026 Haritha S | Cyber Security Portfolio
