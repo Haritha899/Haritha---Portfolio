@@ -106,27 +106,31 @@ nav a:hover {
     transform: translateY(-3px);
 }
 
-.hero-image {
+..hero-image {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero-image img {
-    width: 280px;
-    border-radius: 50%;
-    border: 4px solid var(--green);
-    object-fit: cover;
-}
 .circle {
+    position: absolute;
     width: 320px;
     height: 320px;
     background: var(--green);
     border-radius: 50%;
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    z-index: 1;
+    z-index: 1;   /* behind image */
 }
 
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--bg);
+    z-index: 2;   /* above circle */
+    position: relative;
+}
 /* SECTIONS */
 
 .section {
